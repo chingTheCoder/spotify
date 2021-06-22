@@ -1,0 +1,77 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.brand {
+    padding: 20px;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #d9dadc;
+}
+
+.brand a {
+    text-decoration: none;
+    color : black;
+}
+
+.brand a {
+    font-size:  50px;
+}
+
+.brand i {
+    font-size: 60px;
+}
+
+.brandName {
+    font-weight: 700;
+}
+
+h1{
+    font-weight: 900;
+    font-size: 1.3rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.socialLinks a {
+    display: block;
+}
+
+.socialLinks a {
+    max-width: 450px;
+    border-radius: 500px;
+    text-align: center;
+    margin: 0px auto;
+    margin-bottom: 10px;
+    font-weight: 700;
+    padding: 20px;
+    
+}
+
+.socialLinks a i {
+    margin-right: 20px;
+}
+
+.facebook {
+    background-color: #3b5998;
+    color: white
+}
+
+.apple {
+    background-color: black;
+    color: white;
+}
+
+
+.google img {
+    height: 15px;
+    width: 15px;
+    margin-right: 20px;
+}
+.google, .phone {
+    
+    border: 2px solid #6c6f72;
+
+} 
