@@ -24,6 +24,7 @@ body {
     background-color: #121212;
     color : white;
     height: 100%;
+    padding-bottom: 100px;
 }
 
 
@@ -130,6 +131,8 @@ ul li a {
 
 .topContent {
     padding: 10px 30px;
+    background: linear-gradient(to bottom , #421d1d, #121212);
+    padding-top: 10px;
 }
 
 .acc {
@@ -182,6 +185,69 @@ ul li a {
 }
 
 
+
+.information h3 {
+    font-size: 36px;
+    font-weight: 700;
+    padding-top: 15px;
+}
+
+.infoCardWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+
+
+.infoCard {
+    position: relative;
+    border-radius: 5px;
+    height: 80px;
+    text-decoration: none;
+    color: white;
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background-color: rgba(50, 50, 50, 0.3);
+    overflow: hidden;
+}
+
+
+
+.infoCard:hover {
+    background-color: rgba(80, 80, 80, 0.8);
+}
+.infoCardImage img{
+    width: 100%;
+    height: 80px;
+}
+
+.infoCardText {
+    display: grid;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.getInfoSong {
+    text-align: center;
+    border-radius: 100%;
+    border: none;
+    background-color: #1db954;
+    display: block;
+    width: 40px;
+    height: 40px;
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    display: none;
+}
+
+.getInfoSong i {
+    font-size: 1.3rem;
+}
+
+/*end of top or information*/
+
 .theTopPodcasts {
     margin-top: 30px;
 }
@@ -198,14 +264,16 @@ ul li a {
     padding: 0;
     color: #b2b2b2;
     font-size: 1.1rem;
+    font-weight: 200;
 }
 
 .seeAll {
     text-decoration: none;
     float: right;
     text-transform: uppercase;
-    font-weight: 900;
-    color: #b2b2b2;
+    font-weight: 700;
+    color: #b3b3b3;
+    font-size: 12px;
 }
 
 .cardWrapper {
@@ -222,6 +290,10 @@ ul li a {
     background-color: #181818;
     border-radius: 5px;
     text-decoration: none;
+}
+
+.card:hover {
+    background: linear-gradient(-30deg, #333333, #282828 );
 }
 
 .card img {
@@ -250,4 +322,60 @@ ul li a {
 
 .motherCard {
     padding: 20px 30px;
+}
+
+
+/*music cover*/
+
+.musicPlayerWrapper {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    border-top: 1px solid #2e2d2b;
+}
+
+.musicPlayerCover{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    margin-bottom: 5px;
+    margin-left: 5px;
+}
+
+.musicPlayerCoverImage {
+    display: grid;
+    place-items: center;
+}
+.musicPlayerCoverImage img {
+    width: 100%;
+    height: 60px;
+}
+
+.musicPlayerCoverInformation {
+    display: grid;
+    align-items: center;
+}
+
+.innerMusicPlayerInformation {
+   
+}
+
+.musicNameFromPlayer {
+    font-size: 18px;
+    font-size: normal;
+    text-decoration: none;
+    color: white;
+    margin-left: 15px;
+}
+
+.musicNameFromPlayer:hover {
+    text-decoration: underline;
+    color: white;
+}
+
+
+.musicianList {
+    display: block;
+    margin-left: 15px;
+    color: white;
+    font-size:14px;
+    color: #838383;
 }
