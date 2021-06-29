@@ -379,3 +379,106 @@ ul li a {
     font-size:14px;
     color: #838383;
 }
+
+
+
+.musicPlayer {
+    
+}
+
+
+.musicPlayerControls {
+    text-align: center;
+    padding-top: 10px;
+}
+
+.musicPlayerControls button {
+    border-radius: 50%;
+    border: none;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+   background-color: #181818;
+    color: #b3b3b3;
+}
+
+#btnPlay {
+    background-color white;
+}
+.musicPlayerControls button i {
+    font-size: .8rem;
+} 
+
+.innerMusicPlayerStatics {
+    width: 80%;
+    margin: 0px auto;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+}
+
+.musicProgressBar {
+    background-color: #2e2d2b;
+    height: 4px;
+    margin-top: 15px;
+    border-radius: 10px;
+}
+
+.timer {
+    padding-top: 8px;
+    color: #535353;
+}
+
+.timer:nth-child(1) {
+    text-align: right;
+    padding-right: 5px;
+}
+
+
+#timer2 {
+    padding-left: 5px;
+}
+
+
+.musicExtraControls {
+    display: grid;
+    align-items: center;
+}
+
+.innerMusicExteaControls {
+    text-align: right;
+}
+
+.extra {
+    margin-left: 10px;
+}
+.musicExtraControls {
+}
+
+#volumeIcon {
+    color: #878787;
+    font-size: 1.2rem;
+}
+
+.musicQueue {
+    text-decoration: none;
+    color: #878787;
+    font-size: 1.2rem;
+}
+
+#deviceIcon {
+    color: #878787;
+    font-size: 1.2rem;
+    margin-top: 55px;
+}
+
+#musicVolumeBar {
+    width: 100px;
+    height: 4px;
+    display: inline-block;
+    background-color: #b3b3b3;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+

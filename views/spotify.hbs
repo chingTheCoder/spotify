@@ -585,12 +585,35 @@
                 </div>
             </div>
             <div class="musicPlayer">
-
+                <div class="musicPlayerControls">
+                    <button><i class="fas fa-random"></i></button>
+                    <button><i class="fas fa-step-backward"></i></button>
+                    <button style="background-color: white;color: black;"><i class="fas fa-play"></i></button>
+                    <button><i class="fas fa-step-forward"></i></button>
+                    <button><i class="ri-repeat-2-fill"></i></button>
+                </div>
+                <div class="musicPlayerStatics">
+                    <div class="innerMusicPlayerStatics">
+                         <span class="startTime timer">0.00</span>
+                        <span class="musicProgressBar"></span>
+                        <span class="startTime timer" id="timer2">0.00</span>
+                    </div>
+                </div>
+              
             </div>
             <div class="musicExtraControls">
-
+                <div class="innerMusicExteaControls">
+                    <a href="#" class="extra musicQueue"><i class="fas fa-layer-group"></i></a>
+                    <span id="deviceIcon"><i class="extra ri-speaker-line"></i></span>
+                    <span id="volumeIcon"><i class="extra fas fa-volume-up"></i></span>
+                    <span id="musicVolumeBar" class="extra"></span>
+                </div>
             </div>
         </div>
     </div>
+
+    
+    <audio src="/audio/rihanna.mp3"  type="audio/mp3" controls></audio>
+    <script src="/js/spotify.js"></script>
 </body>
 </html>
