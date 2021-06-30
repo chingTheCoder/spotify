@@ -11,6 +11,9 @@ app.set("view engine", "hbs")
 app.use("/spotify", spotify)
 app.use("/audio", audio)
 
+
+//if the route does not exist
+
 app.get("/", (req, res) => {
     res.render("account")
 })

@@ -588,13 +588,13 @@
                 <div class="musicPlayerControls">
                     <button><i class="fas fa-random"></i></button>
                     <button><i class="fas fa-step-backward"></i></button>
-                    <button style="background-color: white;color: black;"><i class="fas fa-play"></i></button>
+                    <button id="btnPlay" class="play" style="background-color: white;color: black;"><i class="fas fa-play"></i></button>
                     <button><i class="fas fa-step-forward"></i></button>
                     <button><i class="ri-repeat-2-fill"></i></button>
                 </div>
                 <div class="musicPlayerStatics">
                     <div class="innerMusicPlayerStatics">
-                         <span class="startTime timer">0.00</span>
+                         <span class="startTime timer"><span class="startMinute">0</span>:<span class="startSecond">0</span></span>
                         <span class="musicProgressBar"></span>
                         <span class="startTime timer" id="timer2">0.00</span>
                     </div>
@@ -613,7 +613,7 @@
     </div>
 
     
-    <audio src="/audio/rihanna.mp3"  type="audio/mp3" controls></audio>
+    <audio  type="audio/mp3" controls></audio>
     <script src="/js/spotify.js"></script>
 </body>
 </html>
