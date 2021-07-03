@@ -8,7 +8,7 @@ let audio = require("./audio")
 
 app.use(express.static("public"))
 app.set("view engine", "hbs")
-app.use("/spotify", spotify)
+app.use("/spotify/", spotify)
 app.use("/audio", audio)
 
 
