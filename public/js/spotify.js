@@ -1,6 +1,21 @@
 import Home from "./views/Home.js"
 import Search from "./views/Search.js"
 import Library from "./views/Library.js"
+import Notfound from "./views/Notfound.js"
+
+
+//fetch Data for Client
+//check if localStorage exists
+
+if (!localStorage.getItem("playlist")){
+    
+    fetch("/playlist")
+    .then(res => res.json())
+    .then((playlist) => {
+        localStorage.setItem("playlist", JSON.stringify(playlist))
+    })
+
+}
 
 const navigateTo  = url => {
 
@@ -15,7 +30,8 @@ const router = async () => {
 
         { path : "/spotify", view : Home },
         { path : "/spotify/search", view : Search },
-        { path : "/spotify/library", view : Library }
+        { path : "/spotify/library", view : Library },
+        { path : "/notfound" , view : Notfound}
 
     ]
 
@@ -36,7 +52,7 @@ const router = async () => {
 
     if(!match) {
         match = {
-            route : routes[0],
+            route : routes[3],
             isMatch : true
         }
     }
@@ -69,14 +85,35 @@ document.addEventListener("DOMContentLoaded", function () {
 
 let audio = document.querySelector("audio")
 let btnPlay = document.querySelector("#btnPlay")
-
+let btnFoward = document.querySelector("#btnFoward")
+let btnBackWard = document.querySelector("#btnBackWard")
+let song = new MusicPlayer()
 
 function MusicPlayer () {
 
 }
 
+MusicPlayer.prototype.getPlayList = function () {
+
+    return JSON.parse(localStorage.getItem("playlist"))
+
+}
+
+MusicPlayer.prototype.getCurrentSong = function () {
+    let getSong = JSON.parse(localStorage.getItem("playlist"))
+
+    for (let i = 0; i < getSong.length ; i++){
+        if (getSong[i].status === true ) {
+            return getSong[i].song
+        }
+    }
+
+}
+
 MusicPlayer.prototype.playSong = function (song) {
-    audio.setAttribute("src", song)
+    if (!audio.getAttribute("src")){
+        audio.setAttribute("src", song)
+    }
     audio.play()
 }
 
@@ -84,6 +121,80 @@ MusicPlayer.prototype.pauseSong = function () {
     audio.pause()
 }
 
+MusicPlayer.prototype.nextSong = function () {
+
+    let playlist = song.getPlayList() 
+    let currentSongIndex = () => {
+        for (let i = 0; i < playlist.length ; i++) {
+            if (playlist[i].status === true){
+                return i
+            } 
+        }
+    }
+
+    let index = currentSongIndex()
+    console.log(index)
+    playlist[index].status = false
+    if (index ===  7) {
+        index = 0
+        playlist[index].status = true
+        localStorage.setItem("playlist", JSON.stringify(playlist))
+        audio.currentTime = 0
+        audio.removeAttribute("src")
+        song.playSong(playlist[index].song)
+        console.log(playlist[index])
+    }else{
+
+        playlist[index + 1].status = true
+        localStorage.setItem("playlist", JSON.stringify(playlist))
+        audio.currentTime = 0
+        audio.removeAttribute("src")
+        song.playSong(playlist[index + 1].song)
+        console.log(playlist[index])
+    }
+
+
+    if (btnPlay.classList.contains("play")){
+        song.updatePlayerButton(btnPlay,"play","pause","fa-play","fa-pause")
+    }
+}
+
+MusicPlayer.prototype.previousSong = function () {
+    let playlist = song.getPlayList() 
+    let currentSongIndex = () => {
+        for (let i = 0; i < playlist.length ; i++) {
+            if (playlist[i].status === true){
+                return i
+            } 
+        }
+    }
+
+    let index = currentSongIndex()
+    console.log(index)
+    playlist[index].status = false
+    if (index ===  0) {
+        index = 7
+        playlist[index].status = true
+        localStorage.setItem("playlist", JSON.stringify(playlist))
+        audio.currentTime = 0
+        audio.removeAttribute("src")
+        song.playSong(playlist[index].song)
+        console.log(playlist[index])
+    }else{
+
+        playlist[index - 1].status = true
+        localStorage.setItem("playlist", JSON.stringify(playlist))
+        audio.currentTime = 0
+        audio.removeAttribute("src")
+        song.playSong(playlist[index - 1].song)
+        console.log(playlist[index])
+    }
+
+
+    if (btnPlay.classList.contains("play")){
+        song.updatePlayerButton(btnPlay,"play","pause","fa-play","fa-pause")
+    }
+}
 
 MusicPlayer.prototype.updatePlayerButton = function(element, currentAction, newAction,currentIcon, newIcon) {
 
@@ -94,11 +205,16 @@ MusicPlayer.prototype.updatePlayerButton = function(element, currentAction, newA
 
 }
 
+
+audio.addEventListener("ended", function () {
+    song.updatePlayerButton(btnPlay,"pause","play","fa-pause","fa-play")
+})
+
 btnPlay.addEventListener("click", function () {
 
-    let song = new MusicPlayer()
+    
     if (this.classList.contains("play")) {   
-       song.playSong("/audio/rihanna.mp3")
+       song.playSong(song.getCurrentSong())
        song.updatePlayerButton(this,"play","pause","fa-play","fa-pause")
     }
 
@@ -108,6 +224,19 @@ btnPlay.addEventListener("click", function () {
     }
     
 })
+
+
+btnFoward.addEventListener("click", function () {
+  song.nextSong()
+})
+
+
+btnBackWard.addEventListener("click", function () {
+  song.previousSong()
+})
+
+
+
 
 
 

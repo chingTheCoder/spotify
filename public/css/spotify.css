@@ -7,6 +7,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #121212;
 }
 
 .leftSideBar {
@@ -98,6 +99,14 @@ ul li a {
     border-bottom: 1px solid #191919;
 }
 
+.contentNavigation {
+    position: fixed;
+    top: 0;
+    left: 17%;
+    right: 0;
+    padding: 20px 30px;
+    background: rgba(0, 0, 0, 0);
+}
 
 .musicPlayerWrapper {
     position: fixed;
@@ -108,6 +117,19 @@ ul li a {
     right: 0;
     padding: 10px;
 }
+
+.childPage {
+    margin-top: 80px;
+    padding: 0 30px;
+    height: 100vh;
+}
+
+#notFoundPage h1{
+    padding-top: 250px;
+    text-align: center;
+    font-size: 52px;
+}
+
 
 /*content begins here all styles*/
 
@@ -171,12 +193,14 @@ ul li a {
     position: absolute;
     top: 4px;
     left: 5px;
+    color: white;
 }
 
 .accountInfo .username {
     font-size: 1.1rem;
     font-weight: 600;
     margin-left: 40px;
+    color: white;
 }
 
 
@@ -408,6 +432,10 @@ audio {
     color: #b3b3b3;
 }
 
+.musicPlayerControls button i:hover {
+    cursor: pointer;
+}
+
 #btnPlay {
     background-color white;
 }
@@ -486,3 +514,110 @@ audio {
     margin-bottom: 5px;
 }
 
+
+/*search page */
+
+.library {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 20px;
+}
+
+
+.library a {
+    text-decoration: none;
+    color: white;
+    padding-left: 20px;
+    height: 220px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.library a:nth-child(1) {
+    background-color: #af2896;
+}
+
+.library a:nth-child(2) {
+    background-color: #1e3264;
+}
+
+.library a:nth-child(3) {
+    background-color: #8d67ab;
+}
+
+.library a:nth-child(4) {
+    background-color: #e8115b;
+}
+
+.library a:nth-child(5) {
+    background-color: #8d67ab;
+}
+
+.library a:nth-child(6) {
+    background-color: pink;
+}
+
+.library a:nth-child(7) {
+    background-color: #27856a;
+}
+
+.library a:nth-child(8) {
+    background-color: #8d67ab;
+}
+
+.library a:nth-child(9) {
+    background-color: #af2896;
+}
+
+.library a:nth-child(10) {
+    background-color: #1e3264;
+}
+
+.library a:nth-child(11) {
+    background-color: #f037a5;
+}
+
+.library a:nth-child(12) {
+    background-color:  #f59b23 ;
+   
+}
+
+.library a:nth-child(13) {
+    background-color: #dc148c;
+}
+
+.library a:nth-child(14) {
+    background-color: #608108;
+}
+
+.library a:nth-child(15) {
+    background-color: #9cf0e1;
+}
+
+.library a:nth-child(16) {
+    background-color: #477d95;
+}
+
+.library a:nth-child(17) {
+    background-color: #0d73ec;
+}
+
+.library a:nth-child(18) {
+    background-color: #e13300;
+}
+
+
+.library a h3 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.library a img {
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    height: 100px;
+    width: 100px;
+    transform: rotate(50deg);
+}

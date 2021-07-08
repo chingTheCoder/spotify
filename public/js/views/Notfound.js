@@ -4,7 +4,7 @@ export default class extends AbstractView {
 
     constructor () {
         super()
-        this.setTitle("library")
+        this.setTitle("404")
     }
 
     async getHtml () {
@@ -13,7 +13,9 @@ export default class extends AbstractView {
 
         return `
 
-            <div class="childPage" id="libraryPage">welcome to search</div>
+            <div class="childPage" id="notFoundPage">
+                <h1><span style="margin-right: 20px;font-size: 80px;">!<span>NOT FOUND</h1>
+            </div>
             
         `
     }

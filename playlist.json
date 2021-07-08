@@ -1,0 +1,43 @@
+[
+    {   
+        "title" : "rihanna",
+        "song" : "/audio/rihanna.mp3",
+        "status" : true
+    },
+    {   
+        "title" : "Mex Cortez",
+        "song" : "/audio/newthangs.mp3",
+        "status" : false
+    },
+    {   
+        "title" : "Mex Cortez",
+        "song" : "/audio/newthangs.mp3",
+        "status" : false
+    },
+    {   
+        "title" : "Mex Cortez",
+        "song" : "/audio/newthangs.mp3",
+        "status" : false
+    },
+    {   
+        "title" : "Mex Cortez",
+        "song" : "/audio/newthangs.mp3",
+        "status" : false
+    },
+    {   
+        "title" : "Mex Cortez",
+        "song" : "/audio/newthangs.mp3",
+        "status" : false
+    },
+    {   
+        "title" : "Mex Cortez",
+        "song" : "/audio/newthangs.mp3",
+        "status" : false
+    },
+    {   
+        "title" : "rihanna",
+        "song" : "/audio/rihanna.mp3",
+        "status" : false
+    }
+
+]

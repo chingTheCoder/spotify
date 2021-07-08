@@ -25,6 +25,10 @@ app.post("/login", (req,res) => {
     res.redirect("/spotify")
 })
 
+app.get("/playlist", (req, res) => {
+    res.sendFile(__dirname + "/playlist.json")
+})
+
 app.listen(port , () => {
     console.log("listenning from spotify servers")
 })

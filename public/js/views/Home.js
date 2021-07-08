@@ -9,18 +9,11 @@ export default class extends AbstractView {
 
 
     async getHtml () {
-        
+
+        document.querySelector(".contentNavigation").style.background = "rgba(0,0,0,0)"
+        let playlist = JSON.parse(localStorage.getItem("playlist"))
+
         return `
-        
-        <div class="contentNavigation">
-        <a href="#" class="arrows"><i class="fas fa-chevron-left"></i></a>
-        <a href="#" class="arrows"><i class="fas fa-chevron-right"></i></a>
-        <span class="acc">
-            <button class="upgradeButton">UPGRADE</button>
-            <a class="accountInfo"><span class="coverProfileIcon"><i class="ri-user-3-line" ></i></span><span class="username">username</span><i class="fas fa-caret-down dropIcon"></i></a>
-        </span>
-        
-        </div>
         <div class="topContent">
               
                 
@@ -32,7 +25,7 @@ export default class extends AbstractView {
                                <img src="https://i.scdn.co/image/ab67706f0000000205bcb24491b3e6e1533fcb2b">
                            </div>
                            <div class="infoCardText">
-                               normal text
+                               ${playlist[0].title}
                            </div>
                            <button href="#" class="getInfoSong"><i class="fas fa-caret-right"></i></button>
                        </a>
@@ -41,7 +34,7 @@ export default class extends AbstractView {
                                <img src="https://i.scdn.co/image/ab67706f0000000295ead963e2c26040fd00e745">
                            </div>
                            <div class="infoCardText">
-                               normal text
+                               ${playlist[1].title}
                            </div>
                            <button href="#" class="getInfoSong"><i class="fas fa-caret-right"></i></button>
                        </a>
@@ -50,7 +43,7 @@ export default class extends AbstractView {
                                <img src="https://i.scdn.co/image/ab67706f0000000291d98749a36f77ecbb581374">
                            </div>
                            <div class="infoCardText">
-                               normal text
+                               ${playlist[2].title}
                            </div>
                            <button href="#" class="getInfoSong"><i class="fas fa-caret-right"></i></button>
                        </a>
@@ -59,7 +52,7 @@ export default class extends AbstractView {
                                <img src="https://i.scdn.co/image/ab67616d0000b27369093e4410663177f578851d">
                            </div>
                            <div class="infoCardText">
-                               normal text
+                               ${playlist[3].title}
                            </div>
                            <button href="#" class="getInfoSong"><i class="fas fa-caret-right"></i></button>
                        </a>
@@ -68,7 +61,7 @@ export default class extends AbstractView {
                                <img src="https://i.scdn.co/image/ab67706f0000000270360cd384e89a266c8480a1">
                            </div>
                            <div class="infoCardText">
-                               normal text
+                               ${playlist[4].title}
                            </div>
                            <button href="#" class="getInfoSong"><i class="fas fa-caret-right"></i></button>
                        </a>
@@ -77,7 +70,7 @@ export default class extends AbstractView {
                                <img src="https://i.scdn.co/image/ab67706f0000000245a5db34be4a2f006c08284a">
                            </div>
                            <div class="infoCardText">
-                               normal text
+                              ${playlist[5].title}
                            </div>
                            <button href="#" class="getInfoSong"><i class="fas fa-caret-right"></i></button>
                        </a>
@@ -86,7 +79,7 @@ export default class extends AbstractView {
                                <img src="https://i.scdn.co/image/ab67706f000000027311fc2a25dd676a8950f9e9">
                            </div>
                            <div class="infoCardText">
-                               normal text
+                               ${playlist[6].title}
                            </div>
                            <button href="#" class="getInfoSong"><i class="fas fa-caret-right"></i></button>
                        </a>
@@ -95,7 +88,7 @@ export default class extends AbstractView {
                                <img src="https://i.scdn.co/image/ab67706f000000026bdff7dc0e53fe6ca17749b5">
                            </div>
                            <div class="infoCardText">
-                               normal text
+                               ${playlist[7].title}.title
                            </div>
                            <button href="#" class="getInfoSong"><i class="fas fa-caret-right"></i></button>
                        </a>
