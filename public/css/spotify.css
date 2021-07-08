@@ -457,6 +457,13 @@ audio {
     border-radius: 10px;
 }
 
+.progressingBar{
+    width: 0%;
+    background-color:white;
+    display: block;
+    height: 100%;
+}
+
 .timer {
     padding-top: 8px;
     color: #535353;

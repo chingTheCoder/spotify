@@ -210,6 +210,15 @@ audio.addEventListener("ended", function () {
     song.updatePlayerButton(btnPlay,"pause","play","fa-pause","fa-play")
 })
 
+
+audio.addEventListener("timeupdate", function() {
+    // console.log(Math.floor(this.currentTime))
+    // console.log(Math.floor(this.duration))
+    let percentage = Math.floor(( this.currentTime / this.duration ) * 100 )
+    document.querySelector(".progressingBar").style.width = `${percentage}%`
+    
+})
+
 btnPlay.addEventListener("click", function () {
 
     
