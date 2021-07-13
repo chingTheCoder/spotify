@@ -9,18 +9,13 @@ export default class extends AbstractView {
 
     async getHtml () {
 
-        document.querySelector(".contentNavigation").style.background ="#121212"
-
-        let libraryWrapper = document.createElement("div")
-        libraryWrapper.textContent = "Sfdsdfsd sgsfgs"
-
-        let images = ["https://i.scdn.co/image/ab67706f0000000293c88c83bcb12b0800281074"]
+        document.querySelector(".contentNavigation").style.background = "rgba(0,0,0,0)"
 
         return `
 
             <div class="childPage" id="searchPage">
                 <h2>Browse all</h2>
-                <div class="library">
+                <div class="search">
                     <a href="#" class="libraryCategory">
                         <h3>Afro Hits</h3>
                         <img src="https://i.scdn.co/image/ab67706f0000000293c88c83bcb12b0800281074">

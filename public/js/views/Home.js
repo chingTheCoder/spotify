@@ -1,4 +1,5 @@
 import AbstractView from "./AbstractView.js"
+import { hello } from "./test.js"
 
 export default class extends AbstractView {
 
@@ -7,12 +8,11 @@ export default class extends AbstractView {
         this.setTitle("Home")
     }
 
-
     async getHtml () {
 
         document.querySelector(".contentNavigation").style.background = "rgba(0,0,0,0)"
         let playlist = JSON.parse(localStorage.getItem("playlist"))
-
+        
         return `
         <div class="topContent">
               
@@ -20,7 +20,7 @@ export default class extends AbstractView {
                <div class="information">
                    <h3>Good afternoon</h3>
                    <div class="infoCardWrapper">
-                       <a href="#" class="infoCard">
+                       <a href="#" class="infoCard" onmouseover="">
                            <div class="infoCardImage">
                                <img src="https://i.scdn.co/image/ab67706f0000000205bcb24491b3e6e1533fcb2b">
                            </div>
@@ -88,7 +88,7 @@ export default class extends AbstractView {
                                <img src="https://i.scdn.co/image/ab67706f000000026bdff7dc0e53fe6ca17749b5">
                            </div>
                            <div class="infoCardText">
-                               ${playlist[7].title}.title
+                               ${playlist[7].title}
                            </div>
                            <button href="#" class="getInfoSong"><i class="fas fa-caret-right"></i></button>
                        </a>
@@ -97,7 +97,7 @@ export default class extends AbstractView {
                 
 
             </div> 
-
+            
             <div class="theTopPodcasts motherCard">
                     <a href="" class="sectionLink">The Top Podcasts of 2020</a>
                     <h4 class="secInfo">Our favourite new shows of the year <a href="#" class="seeAll">see all</a></h4>

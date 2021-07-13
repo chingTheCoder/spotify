@@ -22,9 +22,7 @@ body {
 
 .content {
     margin-left: 17%;
-    background-color: #121212;
     color : white;
-    height: 100%;
     padding-bottom: 100px;
 }
 
@@ -106,6 +104,7 @@ ul li a {
     right: 0;
     padding: 20px 30px;
     background: rgba(0, 0, 0, 0);
+    z-index: 300;
 }
 
 .musicPlayerWrapper {
@@ -119,9 +118,14 @@ ul li a {
 }
 
 .childPage {
-    margin-top: 80px;
-    padding: 0 30px;
-    height: 100vh;
+    position: fixed;
+    top: -80px;
+    left: 17%;
+    right: 0;
+    bottom: -100px;
+    z-index: -100;
+    background-color: #121212;
+    overflow-y:scroll;
 }
 
 #notFoundPage h1{
@@ -226,6 +230,7 @@ ul li a {
 .infoCard {
     position: relative;
     border-radius: 5px;
+    width: 100%;
     height: 80px;
     text-decoration: none;
     color: white;
@@ -256,7 +261,7 @@ ul li a {
     border-radius: 100%;
     border: none;
     background-color: #1db954;
-    display: block;
+    display: none;
     width: 40px;
     height: 40px;
     color: white;
@@ -266,6 +271,14 @@ ul li a {
     display: none;
 }
 
+.getInfoSong:hover {
+    background-color: red;
+}
+
+.getInfoSongButton {
+    display: block;
+}
+
 .getInfoSong i {
     font-size: 1.3rem;
 }
@@ -273,9 +286,14 @@ ul li a {
 /*end of top or information*/
 
 .theTopPodcasts {
-    margin-top: 30px;
+    margin-top: 0;
+    padding-top: 30px;
+    
 }
 
+.motherCard {
+    background-color: #121212;
+}
 .sectionLink {
     text-decoration: none;
     color: white;
@@ -382,9 +400,6 @@ audio {
     align-items: center;
 }
 
-.innerMusicPlayerInformation {
-   
-}
 
 .musicNameFromPlayer {
     font-size: 18px;
@@ -406,12 +421,6 @@ audio {
     color: white;
     font-size:14px;
     color: #838383;
-}
-
-
-
-.musicPlayer {
-    
 }
 
 
@@ -437,7 +446,7 @@ audio {
 }
 
 #btnPlay {
-    background-color white;
+    background-color :white;
 }
 .musicPlayerControls button i {
     font-size: .8rem;
@@ -492,8 +501,6 @@ audio {
 .extra {
     margin-left: 10px;
 }
-.musicExtraControls {
-}
 
 #volumeIcon {
     color: #878787;
@@ -524,14 +531,20 @@ audio {
 
 /*search page */
 
-.library {
+#searchPage h2 {
+    margin-top: 160px;
+    margin-left: 30px;
+}
+.search {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
+    padding: 0 30px;
+    margin-bottom: 250px;
 }
 
 
-.library a {
+.search a {
     text-decoration: none;
     color: white;
     padding-left: 20px;
@@ -541,90 +554,180 @@ audio {
     overflow: hidden;
 }
 
-.library a:nth-child(1) {
+.search a:nth-child(1) {
     background-color: #af2896;
 }
 
-.library a:nth-child(2) {
+.search a:nth-child(2) {
     background-color: #1e3264;
 }
 
-.library a:nth-child(3) {
+.search a:nth-child(3) {
     background-color: #8d67ab;
 }
 
-.library a:nth-child(4) {
+.search a:nth-child(4) {
     background-color: #e8115b;
 }
 
-.library a:nth-child(5) {
+.search a:nth-child(5) {
     background-color: #8d67ab;
 }
 
-.library a:nth-child(6) {
+.search a:nth-child(6) {
     background-color: pink;
 }
 
-.library a:nth-child(7) {
+.search a:nth-child(7) {
     background-color: #27856a;
 }
 
-.library a:nth-child(8) {
+.search a:nth-child(8) {
     background-color: #8d67ab;
 }
 
-.library a:nth-child(9) {
+.search a:nth-child(9) {
     background-color: #af2896;
 }
 
-.library a:nth-child(10) {
+.search a:nth-child(10) {
     background-color: #1e3264;
 }
 
-.library a:nth-child(11) {
+.search a:nth-child(11) {
     background-color: #f037a5;
 }
 
-.library a:nth-child(12) {
+.search a:nth-child(12) {
     background-color:  #f59b23 ;
    
 }
 
-.library a:nth-child(13) {
+.search a:nth-child(13) {
     background-color: #dc148c;
 }
 
-.library a:nth-child(14) {
+.search a:nth-child(14) {
     background-color: #608108;
 }
 
-.library a:nth-child(15) {
+.search a:nth-child(15) {
     background-color: #9cf0e1;
 }
 
-.library a:nth-child(16) {
+.search a:nth-child(16) {
     background-color: #477d95;
 }
 
-.library a:nth-child(17) {
+.search a:nth-child(17) {
     background-color: #0d73ec;
 }
 
-.library a:nth-child(18) {
+.search a:nth-child(18) {
     background-color: #e13300;
 }
 
 
-.library a h3 {
+.search a h3 {
     font-size: 24px;
     font-weight: 700;
 }
 
-.library a img {
+.search a img {
     position: absolute;
     bottom: -20px;
     right: 0;
     height: 100px;
     width: 100px;
     transform: rotate(50deg);
+}
+
+/*library page*/
+
+#libraryPage { 
+    padding-bottom: 250px;
+}
+
+#libraryInfo {
+    background: linear-gradient( #976d65 , #111111 );
+}
+
+
+#libraryInfoWrapper{
+
+    padding: 0 30px;
+    padding-top: 160px;
+    height: 500px;
+    position: relative;
+}
+
+
+
+#libraryInfoContent {
+   position: absolute;
+   top: 300px;
+   left: 350px;
+}
+
+#libraryInfoContent h1 {
+    font-size: 96px;
+    font-weight: 900;
+    padding: 0;
+    margin: 0;
+}
+
+#libraryInfoContent h6 {
+    font-size: 1.2rem;
+}
+
+#libraryInfoContent h5 {
+    font-size: 1rem;
+}
+
+#libraryInfoContent h5, h6 {
+    padding: 0;
+    margin: 0;
+}
+
+#playlistSongs {
+    padding: 0 30px;
+}
+
+
+#playlistSongsHeader, .row {
+    display: grid;
+    grid-template-columns: 10% 30% 30% 15% 15%;
+    font-size: 1.1rem;
+}
+
+.hr {
+    height: 1px;
+    background-color: #535353;
+    margin: 10px 0;
+}
+
+.row {
+    padding: 10px 0;
+    color: #535353;
+}
+
+.row:hover {
+    color: white;
+    cursor: pointer;
+}
+
+#playlistSongsHeader {
+    color: #9b9b9b;
+}
+
+#playlistSongs table tr {
+    margin: 10px 0;
+}
+
+#playlistSongs table tr:hover {
+    cursor: pointer;
+    color: white;
+}
+#playlistSongs table td {
+    font-size: 1.2rem;
 }

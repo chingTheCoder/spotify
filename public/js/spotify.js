@@ -6,7 +6,6 @@ import Notfound from "./views/Notfound.js"
 
 //fetch Data for Client
 //check if localStorage exists
-
 if (!localStorage.getItem("playlist")){
     
     fetch("/playlist")
@@ -82,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 //routes engine end here//
-
+let app = document.querySelector(".content")
 let audio = document.querySelector("audio")
 let btnPlay = document.querySelector("#btnPlay")
 let btnFoward = document.querySelector("#btnFoward")
