@@ -6,15 +6,6 @@ import Notfound from "./views/Notfound.js"
 
 //fetch Data for Client
 //check if localStorage exists
-if (!localStorage.getItem("playlist")){
-    
-    fetch("/playlist")
-    .then(res => res.json())
-    .then((playlist) => {
-        localStorage.setItem("playlist", JSON.stringify(playlist))
-    })
-
-}
 
 const navigateTo  = url => {
 

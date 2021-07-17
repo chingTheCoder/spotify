@@ -1,5 +1,4 @@
 import AbstractView from "./AbstractView.js"
-import { hello } from "./test.js"
 
 export default class extends AbstractView {
 
