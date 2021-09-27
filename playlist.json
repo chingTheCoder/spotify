@@ -1,7 +1,7 @@
 [
     {   
-        "title" : "rihanna",
-        "song" : "/audio/rihanna.mp3",
+        "title" : "baila",
+        "song" : "/audio/baila.mp3",
         "status" : true
     },
     {   
@@ -10,33 +10,33 @@
         "status" : false
     },
     {   
-        "title" : "Mex Cortez",
-        "song" : "/audio/newthangs.mp3",
-        "status" : false
-    },
-    {   
-        "title" : "Mex Cortez",
-        "song" : "/audio/newthangs.mp3",
-        "status" : false
-    },
-    {   
-        "title" : "Mex Cortez",
-        "song" : "/audio/newthangs.mp3",
-        "status" : false
-    },
-    {   
-        "title" : "Mex Cortez",
-        "song" : "/audio/newthangs.mp3",
-        "status" : false
-    },
-    {   
-        "title" : "Mex Cortez",
-        "song" : "/audio/newthangs.mp3",
-        "status" : false
-    },
-    {   
         "title" : "rihanna",
         "song" : "/audio/rihanna.mp3",
+        "status" : false
+    },
+    {   
+        "title" : "travis",
+        "song" : "/audio/travis.mp3",
+        "status" : false
+    },
+    {   
+        "title" : "annuel",
+        "song" : "/audio/annuel.mp3",
+        "status" : false
+    },
+    {   
+        "title" : "syn",
+        "song" : "/audio/syn.mp3",
+        "status" : false
+    },
+    {   
+        "title" : "spice",
+        "song" : "/audio/spice.mp3",
+        "status" : false
+    },
+    {   
+        "title" : "sheensea",
+        "song" : "/audio/sheensea.mp3",
         "status" : false
     }
 

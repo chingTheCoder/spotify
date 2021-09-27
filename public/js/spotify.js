@@ -3,10 +3,6 @@ import Search from "./views/Search.js"
 import Library from "./views/Library.js"
 import Notfound from "./views/Notfound.js"
 
-
-//fetch Data for Client
-//check if localStorage exists
-
 const navigateTo  = url => {
 
     history.pushState(null, null, url)
@@ -72,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function () {
 })
 
 //routes engine end here//
-let app = document.querySelector(".content")
+// let app = document.querySelector(".content")
 let audio = document.querySelector("audio")
 let btnPlay = document.querySelector("#btnPlay")
 let btnFoward = document.querySelector("#btnFoward")
@@ -132,7 +128,7 @@ MusicPlayer.prototype.nextSong = function () {
         audio.currentTime = 0
         audio.removeAttribute("src")
         song.playSong(playlist[index].song)
-        console.log(playlist[index])
+        
     }else{
 
         playlist[index + 1].status = true
@@ -140,7 +136,7 @@ MusicPlayer.prototype.nextSong = function () {
         audio.currentTime = 0
         audio.removeAttribute("src")
         song.playSong(playlist[index + 1].song)
-        console.log(playlist[index])
+       
     }
 
 
@@ -169,7 +165,7 @@ MusicPlayer.prototype.previousSong = function () {
         audio.currentTime = 0
         audio.removeAttribute("src")
         song.playSong(playlist[index].song)
-        console.log(playlist[index])
+      
     }else{
 
         playlist[index - 1].status = true
@@ -177,7 +173,7 @@ MusicPlayer.prototype.previousSong = function () {
         audio.currentTime = 0
         audio.removeAttribute("src")
         song.playSong(playlist[index - 1].song)
-        console.log(playlist[index])
+      
     }
 
 

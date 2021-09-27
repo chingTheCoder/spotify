@@ -29,7 +29,7 @@ router.get("/:audioFile", (req, res) => {
         "Content-Range": `bytes ${start}-${end}/${videoSize}`,
         "Accept-Ranges": "bytes",
         "Content-Length": contentLength,
-        "Content-Type": "video/mp4",
+        "Content-Type": "video/mp3",
     }
 
     res.writeHead(206, headers)
