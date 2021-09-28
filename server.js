@@ -13,7 +13,7 @@ app.use("/audio", audio)
 
 
 //if the route does not exist
-
+//commit not working changing R to r
 app.get("/", (req, res) => {
     res.render("account")
 })
